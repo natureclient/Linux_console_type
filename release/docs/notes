@@ -1,0 +1,33 @@
+"dev/input" will allow you to read raw events from keyboard and mouse
+
+Event Devices
+    Open the right one and read linux event structures from it (like press and release events)
+
+Checkout /usr/include/linux/input.h
+
+Need to finding the right eventX device
+
+Two ways to read:
+    - input layer:
+        kernel makes the various keyboard, mouse, joysticks etc available on /dev/input/* device file
+        (one file per device)
+
+    - X layer:
+        this layer reads the device files and translates them into X events which are understood by
+        graphical applications
+
+Natural way is for the application to interact with the X laywer but you can also just open up the
+corresponding /device/input/ file and interpret the events.
+
+Correct answer
+--------------
+The keyboard itself is one of the entires in /dev/input. You can locate it by it's connection type
+(USB, PS/2) in /dev/input/by-path.
+
+If you're running a GUI application the low level method is to call XNextEvent
+
+If it's a terminal app, read from standard input or from /dev/tty (/dev/tty is always the terminal
+that your program is running on, even if standard input has been redirected). You'll want the
+terminal in raw mode.
+
+Also a library helps. The de facto standard is ncurses.

@@ -1,0 +1,12 @@
+-h Implement option flag for displaying help section
+-r Implement option flag for Implement random sentence generation option flag
+-s Implement option flag for displaying spaces as dots
+-a Implement option flag to display all text from file instead of target line
+-l Implement option flag to display only one line of text (80 chars wide)
+    - takes an int arg (1 - 256)
+
+Allow user to restart current target line
+    - 
+
+Calculate overall average (accuracy & WPM) the entire time. Show during termination
+special command to restart current line
