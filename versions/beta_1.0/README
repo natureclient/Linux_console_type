@@ -1,3 +1,0 @@
-This is a beta of the typying software. This implemenation only supports
-the "type from file" feature where it takes input from a text file
-of your choosing (passed in via CMD args) and you type it out.
