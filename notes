@@ -1,0 +1,15 @@
+This software relies on a dictionary file, containing a list of words 
+that the software will choose from when generating sentences of 
+random words. There is a format that is expected of the dictionary
+file. Every word is deliminated with a newline (white space is ignored).
+That is, words are grouped by length, in ASCENDING order. Top of the
+file has the shortest words and the bottom has the longest words. The
+other requirement is that the size of the groupings for each word
+length is the same. That is, if there are five three-letter words,
+then there are five four-letter words, and so on.
+
+dictionary_file_validator
+    read word line by line.
+    count number of words of same length
+    when a higher number
+
